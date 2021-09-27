@@ -1,0 +1,37 @@
+{
+    "CPU USAGE": {
+        "Logical Processor 1": {
+            "User Utilization": 2.3,
+            "System Utilization": 3.1,
+            "Idle": 93.1,
+            "Interrupts": 1.5,
+            "DPC": 0.0
+        },
+        "Logical Processor 2": {
+            "User Utilization": 1.6,
+            "System Utilization": 1.6,
+            "Idle": 96.9,
+            "Interrupts": 0.0,
+            "DPC": 0.0
+        },
+        "Logical Processor 3": {
+            "User Utilization": 3.1,
+            "System Utilization": 0.8,
+            "Idle": 96.1,
+            "Interrupts": 0.0,
+            "DPC": 0.0
+        },
+        "Logical Processor 4": {
+            "User Utilization": 0.8,
+            "System Utilization": 1.6,
+            "Idle": 97.7,
+            "Interrupts": 0.0,
+            "DPC": 0.0
+        }
+    },
+    "CPU FREQUENCY": {
+        "Current Frequency": 2703.0,
+        "Max Frequency": 2904.0,
+        "Min Frequency": 0.0
+    }
+}
