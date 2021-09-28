@@ -55,11 +55,11 @@ def get_lpu_usage():
     ii1=data[0][2]
     int1=data[0][3]
     dpc1=data[0][4]
-    dictCPU["CPU USAGE"]["Logical Processor 1"]["User Utilization"]=uu1
-    dictCPU["CPU USAGE"]["Logical Processor 1"]["System Utilization"]=su1
-    dictCPU["CPU USAGE"]["Logical Processor 1"]["Idle"]=ii1
-    dictCPU["CPU USAGE"]["Logical Processor 1"]["Interrupts"]=int1
-    dictCPU["CPU USAGE"]["Logical Processor 1"]["DPC"]=dpc1
+    dictCPU["CPU USAGE"]["Logical Processor 1"]["User Utilization"]=str(uu1) + " %"
+    dictCPU["CPU USAGE"]["Logical Processor 1"]["System Utilization"]=str(su1) + " %"
+    dictCPU["CPU USAGE"]["Logical Processor 1"]["Idle"]=str(ii1) + " %"
+    dictCPU["CPU USAGE"]["Logical Processor 1"]["Interrupts"]=str(int1) + " %"
+    dictCPU["CPU USAGE"]["Logical Processor 1"]["DPC"]=str(dpc1) + " %"
     
     # LPU 2 Data
     lpu2=data[0]
@@ -68,11 +68,11 @@ def get_lpu_usage():
     ii2=data[1][2]
     int2=data[1][3]
     dpc2=data[1][4] 
-    dictCPU["CPU USAGE"]["Logical Processor 2"]["User Utilization"]=uu2
-    dictCPU["CPU USAGE"]["Logical Processor 2"]["System Utilization"]=su2
-    dictCPU["CPU USAGE"]["Logical Processor 2"]["Idle"]=ii2
-    dictCPU["CPU USAGE"]["Logical Processor 2"]["Interrupts"]=int2
-    dictCPU["CPU USAGE"]["Logical Processor 2"]["DPC"]=dpc2
+    dictCPU["CPU USAGE"]["Logical Processor 2"]["User Utilization"]=str(uu2) + " %"
+    dictCPU["CPU USAGE"]["Logical Processor 2"]["System Utilization"]=str(su2) + " %"
+    dictCPU["CPU USAGE"]["Logical Processor 2"]["Idle"]=str(ii2) + " %"
+    dictCPU["CPU USAGE"]["Logical Processor 2"]["Interrupts"]=str(int2) + " %"
+    dictCPU["CPU USAGE"]["Logical Processor 2"]["DPC"]=str(dpc2) + " %"
 
     # LPU 3 Data
     lpu3=data[2]
@@ -81,11 +81,11 @@ def get_lpu_usage():
     ii3=data[2][2]
     int3=data[2][3]
     dpc3=data[2][4]
-    dictCPU["CPU USAGE"]["Logical Processor 3"]["User Utilization"]=uu3
-    dictCPU["CPU USAGE"]["Logical Processor 3"]["System Utilization"]=su3
-    dictCPU["CPU USAGE"]["Logical Processor 3"]["Idle"]=ii3
-    dictCPU["CPU USAGE"]["Logical Processor 3"]["Interrupts"]=int3
-    dictCPU["CPU USAGE"]["Logical Processor 3"]["DPC"]=dpc3
+    dictCPU["CPU USAGE"]["Logical Processor 3"]["User Utilization"]=str(uu3) + " %"
+    dictCPU["CPU USAGE"]["Logical Processor 3"]["System Utilization"]=str(su3) + " %"
+    dictCPU["CPU USAGE"]["Logical Processor 3"]["Idle"]=str(ii3) + " %"
+    dictCPU["CPU USAGE"]["Logical Processor 3"]["Interrupts"]=str(int3) + " %"
+    dictCPU["CPU USAGE"]["Logical Processor 3"]["DPC"]=str(dpc3) + " %"
     
     # LPU 4 Data
     lpu4=data[3]
@@ -94,24 +94,19 @@ def get_lpu_usage():
     ii4=data[3][2]
     int4=data[3][3]
     dpc4=data[3][4]
-    dictCPU["CPU USAGE"]["Logical Processor 4"]["User Utilization"]=uu4
-    dictCPU["CPU USAGE"]["Logical Processor 4"]["System Utilization"]=su4
-    dictCPU["CPU USAGE"]["Logical Processor 4"]["Idle"]=ii4
-    dictCPU["CPU USAGE"]["Logical Processor 4"]["Interrupts"]=int4
-    dictCPU["CPU USAGE"]["Logical Processor 4"]["DPC"]=dpc4
+    dictCPU["CPU USAGE"]["Logical Processor 4"]["User Utilization"]=str(uu4) + " %"
+    dictCPU["CPU USAGE"]["Logical Processor 4"]["System Utilization"]=str(su4) + " %"
+    dictCPU["CPU USAGE"]["Logical Processor 4"]["Idle"]=str(ii4) + " %"
+    dictCPU["CPU USAGE"]["Logical Processor 4"]["Interrupts"]=str(int4) + " %"
+    dictCPU["CPU USAGE"]["Logical Processor 4"]["DPC"]=str(dpc4) + " %"
 
 
-    dictCPU["CPU FREQUENCY"]["Current Frequency"]=f1
-    dictCPU["CPU FREQUENCY"]["Min Frequency"]=f2
-    dictCPU["CPU FREQUENCY"]["Max Frequency"]=f3
+    dictCPU["CPU FREQUENCY"]["Current Frequency"]=str(f1)+ " MHz"
+    dictCPU["CPU FREQUENCY"]["Min Frequency"]=str(f2)+ " MHz"
+    dictCPU["CPU FREQUENCY"]["Max Frequency"]=str(f3)+ " MHz"
     json_out = json.dumps(dictCPU,indent=4)
     # print(json_out)
-    # Writing to data.json
-    f=open("lpu_data.json", "w")
-    f.write(json_out)
-    # return(json_out)
-
-
-    
-
-get_lpu_usage()
+    # # Writing to data.json
+    # f=open("lpu_data.json", "w")
+    # f.write(json_out)
+    return(json_out)
