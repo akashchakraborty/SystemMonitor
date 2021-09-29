@@ -4,9 +4,9 @@ import json
 
 def get_mem_data():
     mem = psutil.virtual_memory()
-    total_mem=(((mem.total/1024)/1024)/1024)
-    available_mem=(((mem.available/1024)/1024)/1024)
-    used_mem=(((mem.used/1024)/1024)/1024)
+    total_mem=round((((mem.total/1024)/1024)/1024),2)
+    available_mem=round((((mem.available/1024)/1024)/1024),2)
+    used_mem=round((((mem.used/1024)/1024)/1024),2)
     return total_mem,available_mem,used_mem
 
 def show_mem_data():
@@ -26,8 +26,8 @@ def show_mem_data():
     mem_out=json.dumps(dict2,indent=4)
     return mem_out
 
-out = show_mem_data()
-print(out)
+# out = show_mem_data()
+# print(out)
 
 
     
